@@ -14,6 +14,7 @@
 		56174C1422FB3337001C1152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56174C1322FB3337001C1152 /* Assets.xcassets */; };
 		56174C1722FB3337001C1152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56174C1522FB3337001C1152 /* LaunchScreen.storyboard */; };
 		56174C1A22FB3337001C1152 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C1922FB3337001C1152 /* main.m */; };
+		56174C2422FB35C3001C1152 /* UIChessboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C2322FB35C3001C1152 /* UIChessboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		56174C1622FB3337001C1152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56174C1822FB3337001C1152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56174C1922FB3337001C1152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56174C2222FB35C3001C1152 /* UIChessboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessboard.h; sourceTree = "<group>"; };
+		56174C2322FB35C3001C1152 /* UIChessboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UIChessboard.m; path = ../UIChessboard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 		56174C0622FB3336001C1152 /* telechess-client */ = {
 			isa = PBXGroup;
 			children = (
+				56174C2222FB35C3001C1152 /* UIChessboard.h */,
+				56174C2322FB35C3001C1152 /* UIChessboard.m */,
 				56174C0722FB3336001C1152 /* AppDelegate.h */,
 				56174C0822FB3336001C1152 /* AppDelegate.m */,
 				56174C0A22FB3336001C1152 /* ViewController.h */,
@@ -148,6 +153,7 @@
 				56174C1222FB3336001C1152 /* telechess_client.xcdatamodeld in Sources */,
 				56174C1A22FB3337001C1152 /* main.m in Sources */,
 				56174C0922FB3336001C1152 /* AppDelegate.m in Sources */,
+				56174C2422FB35C3001C1152 /* UIChessboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
