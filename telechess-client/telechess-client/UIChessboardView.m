@@ -1,14 +1,15 @@
 //
-//  UIChessboard.m
+//  UIChessboardView.m
 //  telechess-client
 //
 //  Created by Roman Lazarev on 07/08/2019.
 //  Copyright © 2019 Roman Lazarev. All rights reserved.
 //
 
-#import "UIChessboard.h"
+#import "UIChessboardView.h"
+#import "UIChessPiece.h"
 
-@implementation UIChessboard
+@implementation UIChessboardView
     
 - (id)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
@@ -28,7 +29,22 @@
 
 - (void) initInternals{
     self.boxBorderColor = [UIColor darkGrayColor];
-    //self.backgroundColor = [UIColor blackColor];
+    
+    self.blackKingImage = [UIImage imageNamed:@"black_king"];
+    self.blackQueenImage = [UIImage imageNamed:@"black_queen"];
+    self.blackBishopImage = [UIImage imageNamed:@"black_bishop"];
+    self.blackKnightImage = [UIImage imageNamed:@"black_knight"];
+    self.blackRookImage = [UIImage imageNamed:@"black_rook"];
+    self.blackPawnImage = [UIImage imageNamed:@"black_pawn"];
+    
+    self.whiteKingImage = [UIImage imageNamed:@"white_king"];
+    self.whiteQueenImage = [UIImage imageNamed:@"white_queen"];
+    self.whiteBishopImage = [UIImage imageNamed:@"white_bishop"];
+    self.whiteKnightImage = [UIImage imageNamed:@"white_knight"];
+    self.whiteRookImage = [UIImage imageNamed:@"white_rook"];
+    self.whitePawnImage = [UIImage imageNamed:@"white_pawn"];
+    
+    self.backgroundColor = [UIColor clearColor];
 }
 
 /*
@@ -61,7 +77,18 @@
             [boxPath stroke];
         }
     }
+    
+    for(NSInteger pawn = 0; pawn < 8; pawn ++) {
+        //[self.blackPawnImage drawInRect:CGRectMake(2+pawn*cellSize, cellSize, cellSize, cellSize)];
+        [self addSubview:[[UIChessPiece alloc] initWithImage:self.blackPawnImage andRect:CGRectMake(2+pawn*cellSize, cellSize, cellSize, cellSize)]];
+        
+    }
+    
+    for(NSInteger pawn = 0; pawn < 8; pawn ++) {
+        [self addSubview:[[UIChessPiece alloc] initWithImage:self.whitePawnImage andRect:CGRectMake(2+pawn*cellSize, cellSize*6, cellSize, cellSize)]];
+        //[self.whitePawnImage drawInRect:CGRectMake(2+pawn*cellSize, cellSize*6, cellSize, cellSize)];
+    }
+    
 }
-
 
 @end
