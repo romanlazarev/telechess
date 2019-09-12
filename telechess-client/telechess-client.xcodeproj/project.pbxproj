@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561047AB231455F60031EA83 /* ChessboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 561047AA231455F60031EA83 /* ChessboardModel.m */; };
 		56174C0922FB3336001C1152 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C0822FB3336001C1152 /* AppDelegate.m */; };
 		56174C0C22FB3336001C1152 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C0B22FB3336001C1152 /* ViewController.m */; };
 		56174C0F22FB3336001C1152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56174C0D22FB3336001C1152 /* Main.storyboard */; };
@@ -14,12 +15,16 @@
 		56174C1422FB3337001C1152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56174C1322FB3337001C1152 /* Assets.xcassets */; };
 		56174C1722FB3337001C1152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56174C1522FB3337001C1152 /* LaunchScreen.storyboard */; };
 		56174C1A22FB3337001C1152 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C1922FB3337001C1152 /* main.m */; };
+		561820E72326F92200D792E4 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 561820E62326F92200D792E4 /* NetworkManager.m */; };
 		56233FA32301D5A000C9C6C4 /* UIChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 56233FA22301D5A000C9C6C4 /* UIChessPiece.m */; };
 		56233FA62301D87D00C9C6C4 /* UIChessboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */; };
+		5673F6FF23292F6E00DD93C4 /* ChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 5673F6FE23292F6E00DD93C4 /* ChessPiece.m */; };
 		568011A623032B2800BC26D9 /* UIChessboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568011A523032B2800BC26D9 /* UIChessboardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		561047A9231455F60031EA83 /* ChessboardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessboardModel.h; sourceTree = "<group>"; };
+		561047AA231455F60031EA83 /* ChessboardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessboardModel.m; sourceTree = "<group>"; };
 		56174C0422FB3336001C1152 /* telechess-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "telechess-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56174C0722FB3336001C1152 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56174C0822FB3336001C1152 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,10 +37,14 @@
 		56174C1822FB3337001C1152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56174C1922FB3337001C1152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56174C2222FB35C3001C1152 /* UIChessboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessboardView.h; sourceTree = "<group>"; };
+		561820E52326F92200D792E4 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		561820E62326F92200D792E4 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		56233FA12301D5A000C9C6C4 /* UIChessPiece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessPiece.h; sourceTree = "<group>"; };
 		56233FA22301D5A000C9C6C4 /* UIChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIChessPiece.m; sourceTree = "<group>"; };
 		56233FA42301D87D00C9C6C4 /* UIChessboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessboardViewController.h; sourceTree = "<group>"; };
 		56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIChessboardViewController.m; sourceTree = "<group>"; };
+		5673F6FD23292F6E00DD93C4 /* ChessPiece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessPiece.h; sourceTree = "<group>"; };
+		5673F6FE23292F6E00DD93C4 /* ChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessPiece.m; sourceTree = "<group>"; };
 		568011A523032B2800BC26D9 /* UIChessboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIChessboardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,8 +78,9 @@
 		56174C0622FB3336001C1152 /* telechess-client */ = {
 			isa = PBXGroup;
 			children = (
-				56174C2222FB35C3001C1152 /* UIChessboardView.h */,
-				568011A523032B2800BC26D9 /* UIChessboardView.m */,
+				561820E42326F0A700D792E4 /* Models */,
+				5673F6FC232924FC00DD93C4 /* ViewControllers */,
+				5673F70023294A2000DD93C4 /* Views */,
 				56174C0722FB3336001C1152 /* AppDelegate.h */,
 				56174C0822FB3336001C1152 /* AppDelegate.m */,
 				56174C0A22FB3336001C1152 /* ViewController.h */,
@@ -81,12 +91,41 @@
 				56174C1822FB3337001C1152 /* Info.plist */,
 				56174C1922FB3337001C1152 /* main.m */,
 				56174C1022FB3336001C1152 /* telechess_client.xcdatamodeld */,
-				56233FA12301D5A000C9C6C4 /* UIChessPiece.h */,
-				56233FA22301D5A000C9C6C4 /* UIChessPiece.m */,
+			);
+			path = "telechess-client";
+			sourceTree = "<group>";
+		};
+		561820E42326F0A700D792E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5673F6FD23292F6E00DD93C4 /* ChessPiece.h */,
+				5673F6FE23292F6E00DD93C4 /* ChessPiece.m */,
+				561047A9231455F60031EA83 /* ChessboardModel.h */,
+				561047AA231455F60031EA83 /* ChessboardModel.m */,
+				561820E52326F92200D792E4 /* NetworkManager.h */,
+				561820E62326F92200D792E4 /* NetworkManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5673F6FC232924FC00DD93C4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				56233FA42301D87D00C9C6C4 /* UIChessboardViewController.h */,
 				56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */,
 			);
-			path = "telechess-client";
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5673F70023294A2000DD93C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				56174C2222FB35C3001C1152 /* UIChessboardView.h */,
+				568011A523032B2800BC26D9 /* UIChessboardView.m */,
+				56233FA12301D5A000C9C6C4 /* UIChessPiece.h */,
+				56233FA22301D5A000C9C6C4 /* UIChessPiece.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +199,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				56174C0C22FB3336001C1152 /* ViewController.m in Sources */,
+				5673F6FF23292F6E00DD93C4 /* ChessPiece.m in Sources */,
 				56233FA32301D5A000C9C6C4 /* UIChessPiece.m in Sources */,
+				561820E72326F92200D792E4 /* NetworkManager.m in Sources */,
 				568011A623032B2800BC26D9 /* UIChessboardView.m in Sources */,
+				561047AB231455F60031EA83 /* ChessboardModel.m in Sources */,
 				56233FA62301D87D00C9C6C4 /* UIChessboardViewController.m in Sources */,
 				56174C1222FB3336001C1152 /* telechess_client.xcdatamodeld in Sources */,
 				56174C1A22FB3337001C1152 /* main.m in Sources */,

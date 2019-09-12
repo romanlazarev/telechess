@@ -27,4 +27,11 @@
     
 }
 
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"touchesEnded");
+}
+
+- (void)tapped:(UIChessPiece *)sender {
+}
+
 @end

@@ -1,5 +1,5 @@
 //
-//  UIChessboardViewController.h
+//  UIChessPiece.h
 //  telechess-client
 //
 //  Created by Roman Lazarev on 12/08/2019.
@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIChessboardViewController : UIViewController
+@interface UIChessPiece : UIControl
+
+@property UIImage *image;
+
+-(id)initWithImage:(UIImage*)image andRect:(CGRect)rect;
+
+- (void)tapped:(UIChessPiece *)sender;
 
 @end
 
