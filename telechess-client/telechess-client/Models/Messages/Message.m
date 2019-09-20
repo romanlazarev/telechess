@@ -6,7 +6,6 @@
 //  Copyright © 2019 Roman Lazarev. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "Message.h"
 
 @implementation Message

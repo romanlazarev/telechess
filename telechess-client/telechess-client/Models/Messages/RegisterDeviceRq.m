@@ -8,13 +8,24 @@
 
 #import "RegisterDeviceRq.h"
 
-NSString *const METHOD_URL = @"/registerDevice";
-
 @implementation RegisterDeviceRq
+static NSString *const METHOD_URL = @"/registerDevice";
+
 @synthesize uuid;
+@synthesize nickname;
+
+- (instancetype)initWithDeviceId:(NSString*)deviceId andNickname:(NSString*)nickname;
+{
+    self = [super init];
+    if (self) {
+        self.uuid = deviceId;
+        self.nickname = nickname;
+    }
+    return self;
+}
 
 - (NSDictionary *)dictionary {
-    return @{ @"uuid": [self uuid] };
+    return @{ @"uuid": [self uuid], @"nickname": [self nickname] };
 }
 
 + (NSString *)methodUrl {

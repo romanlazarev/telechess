@@ -24,7 +24,10 @@ NSUInteger const URL_REQUEST_TIMEOUT = 15;
 
 - (void)request:(Message*)message {
     NSString *url = [SERVICE_HOST_URL stringByAppendingString:[[message class] methodUrl]];
-    [self requestDataSynchronouslyWithUrlString:url andPayload:[message jsonData]];
+    NSData *received = [self requestDataSynchronouslyWithUrlString:url andPayload:[message jsonData]];
+    if(received) {
+        NSLog(@"Received string: %@", [[NSString alloc] initWithData:received encoding:NSUTF8StringEncoding]);
+    }
 }
 
 - (nullable Message*)request:(Message*)message withResponseClass:(Class)aClass {
@@ -34,6 +37,7 @@ NSUInteger const URL_REQUEST_TIMEOUT = 15;
     NSString *url = [SERVICE_HOST_URL stringByAppendingString:[[message class] methodUrl]];
     NSData *received = [self requestDataSynchronouslyWithUrlString:url andPayload:[message jsonData]];
     if(received) {
+        NSLog(@"Received string: %@", [[NSString alloc] initWithData:received encoding:NSUTF8StringEncoding]);
         return [[aClass alloc] initWithJsonData:received];
     }
     else return NULL;
@@ -45,7 +49,7 @@ NSUInteger const URL_REQUEST_TIMEOUT = 15;
     NSError *error = nil;
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     if(error) {
-        NSLog(@"%@", error);
+        NSLog(@"Error occured while converting data to JSON: %@", error);
     }
     return jsonData;
 }
@@ -82,11 +86,15 @@ NSUInteger const URL_REQUEST_TIMEOUT = 15;
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable receivedData, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSHTTPURLResponse *httpResponse;
+        if([response isKindOfClass:[NSHTTPURLResponse class]]) {
+            httpResponse = (NSHTTPURLResponse*)response;
+        }
         data = receivedData;
         if(error) {
             NSLog(@"ERROR: %@", error);
         }
-        if(!data) {
+        if(!data || (httpResponse && httpResponse.statusCode != 200)) {
             NSLog(@"RESPONSE: %@", response);
         }
         dispatch_semaphore_signal(semaphore);

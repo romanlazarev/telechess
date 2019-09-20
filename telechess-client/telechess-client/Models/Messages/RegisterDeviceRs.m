@@ -9,10 +9,10 @@
 #import "RegisterDeviceRs.h"
 
 @implementation RegisterDeviceRs
-@synthesize result;
+@synthesize userToken;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self.result = [dictionary valueForKey:@"result"];
+    self.userToken = [dictionary valueForKey:@"userToken"];
     return self;
 }
 

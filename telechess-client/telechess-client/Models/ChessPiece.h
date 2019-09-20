@@ -7,20 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Enums.h"
 
-typedef NS_ENUM(NSUInteger, CPType) {
-    kPawn,
-    kRook,
-    kKnight,
-    kBishop,
-    kQueen,
-    kKing
-};
-
-typedef NS_ENUM(NSUInteger, CPSide) {
-    kWhite=1,
-    kBlack=2
-};
 
 NS_ASSUME_NONNULL_BEGIN
 

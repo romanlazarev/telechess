@@ -6,13 +6,16 @@
 //  Copyright © 2019 Roman Lazarev. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "Message.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegisterDeviceRq : Message
 @property NSString *uuid;
+@property NSString *nickname;
+
+- (instancetype)initWithDeviceId:(NSString*)deviceId andNickname:(NSString*)nickname;
 
 @end
 

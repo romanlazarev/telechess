@@ -6,6 +6,8 @@
 //  Copyright © 2019 Roman Lazarev. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #define mustOverride() @throw [NSException exceptionWithName:NSInvalidArgumentException reason:[NSString stringWithFormat:@"%s must be overridden", __PRETTY_FUNCTION__] userInfo:nil]
 #define methodNotImplemented() mustOverride()
 #define invalidArgumentExeption() @throw [NSException exceptionWithName:NSInvalidArgumentException reason:[NSString stringWithFormat:@"%s received invalid argument", __PRETTY_FUNCTION__] userInfo:nil]
