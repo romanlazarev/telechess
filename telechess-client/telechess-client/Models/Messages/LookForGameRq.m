@@ -13,11 +13,11 @@
 
 static NSString *const METHOD_URL = @"/lookForGame";
 
-- (instancetype)initWithUserToken:(NSString*)userToken;
+- (instancetype)initWithUserToken:(NSString*)token;
 {
     self = [super init];
     if (self) {
-        self.userToken = userToken;
+        userToken = token;
     }
     return self;
 }

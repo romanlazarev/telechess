@@ -12,10 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegisterDeviceRq : Message
-@property NSString *uuid;
-@property NSString *nickname;
+@property (nonatomic, copy) NSString *uuid;
+@property (nonatomic, copy) NSString *nickname;
+@property (nonatomic, copy) NSString *model;
 
-- (instancetype)initWithDeviceId:(NSString*)deviceId andNickname:(NSString*)nickname;
+- (instancetype)initWithDeviceId:(NSString*)deviceId andNickname:(NSString*)nickname andDeviceModel:(NSString*)deviceModel;
 
 @end
 

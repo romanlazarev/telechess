@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GetGameStateRq : Message
-@property NSString *gameId;
+@property (nonatomic, copy) NSString *gameId;
 
 - (instancetype)initWithGameId:(NSString*)gameId;
 @end

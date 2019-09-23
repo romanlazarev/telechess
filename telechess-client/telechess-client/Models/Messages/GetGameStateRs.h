@@ -11,19 +11,19 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GetGameStateRs : Message
-@property NSString *gameId;
-@property NSUInteger state;
-@property NSString *playerAName;
-@property NSString *playerBName;
-@property NSString *currMove;
-@property NSUInteger createdMs;
-@property NSUInteger startedMs;
-@property NSUInteger lastAMoveMs;
-@property NSUInteger lastBMoveMs;
-@property NSUInteger finishedMs;
-@property NSString *winner;
-@property NSString *looser;
-@property BOOL isTechWin;
+@property (nonatomic, copy, readonly) NSString *gameId;
+@property (nonatomic, readonly) NSUInteger state;
+@property (nonatomic, copy, readonly) NSString *playerAName;
+@property (nonatomic, copy, readonly) NSString *playerBName;
+@property (nonatomic, copy, readonly) NSString *currMove;
+@property (nonatomic, readonly) NSUInteger createdMs;
+@property (nonatomic, readonly) NSUInteger startedMs;
+@property (nonatomic, readonly) NSUInteger lastAMoveMs;
+@property (nonatomic, readonly) NSUInteger lastBMoveMs;
+@property (nonatomic, readonly) NSUInteger finishedMs;
+@property (nonatomic, copy, readonly) NSString *winner;
+@property (nonatomic, copy, readonly) NSString *looser;
+@property (nonatomic, readonly) BOOL isTechWin;
 
 @end
 

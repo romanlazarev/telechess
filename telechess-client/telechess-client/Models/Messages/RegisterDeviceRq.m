@@ -13,19 +13,21 @@ static NSString *const METHOD_URL = @"/registerDevice";
 
 @synthesize uuid;
 @synthesize nickname;
+@synthesize model;
 
-- (instancetype)initWithDeviceId:(NSString*)deviceId andNickname:(NSString*)nickname;
+- (instancetype)initWithDeviceId:(NSString*)deviceId andNickname:(NSString*)aNickname andDeviceModel:(nonnull NSString *)deviceModel;
 {
     self = [super init];
     if (self) {
-        self.uuid = deviceId;
-        self.nickname = nickname;
+        uuid = deviceId;
+        nickname = aNickname;
+        model = deviceModel;
     }
     return self;
 }
 
 - (NSDictionary *)dictionary {
-    return @{ @"uuid": [self uuid], @"nickname": [self nickname] };
+    return @{ @"uuid": [self uuid], @"nickname": [self nickname], @"model": [self model] };
 }
 
 + (NSString *)methodUrl {

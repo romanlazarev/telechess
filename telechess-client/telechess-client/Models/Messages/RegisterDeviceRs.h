@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegisterDeviceRs : Message
-@property NSString *userToken;
+@property (nonatomic, copy, readonly) NSString *userToken;
 
 @end
 

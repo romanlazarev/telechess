@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CurrentStateRq : Message
-@property NSString* userToken;
+@property (nonatomic, copy) NSString *userToken;
 
 - (instancetype)initWithUserToken:(NSString*)userToken;
 @end

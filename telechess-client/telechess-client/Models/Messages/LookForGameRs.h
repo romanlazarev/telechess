@@ -11,8 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LookForGameRs : Message
-@property NSString *gameId;
-@property NSUInteger state;
+@property (nonatomic, copy, readonly) NSString *gameId;
+@property (nonatomic, readonly) NSUInteger state;
 @end
 
 NS_ASSUME_NONNULL_END

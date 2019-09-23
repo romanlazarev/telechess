@@ -1,5 +1,5 @@
 //
-//  NetworkGameModel.h
+//  NetworkService.h
 //  telechess-client
 //
 //  Created by Roman Lazarev on 10/09/2019.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Messages/Message.h"
+#import "../Messages/Message.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NetworkManager : NSObject
+@interface NetworkService : NSObject
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 
 - (void)request:(Message*)message;
 - (nullable Message*)request:(Message*)message withResponseClass:(Class)aClass;

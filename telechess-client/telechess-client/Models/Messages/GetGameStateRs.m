@@ -24,19 +24,19 @@
 @synthesize isTechWin;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self.gameId = [dictionary valueForKey:@"gameId"];
-    self.state = [[dictionary valueForKey:@"state"] unsignedIntegerValue];
-    self.playerAName = [dictionary valueForKey:@"playerAName"];
-    self.playerBName = [dictionary valueForKey:@"playerBName"];
-    self.currMove = [dictionary valueForKey:@"currMove"];
-    self.createdMs = [[dictionary valueForKey:@"createdMs"] unsignedIntegerValue];
-    self.startedMs = [[dictionary valueForKey:@"startedMs"] unsignedIntegerValue];
-    self.lastAMoveMs = [[dictionary valueForKey:@"lastAMoveMs"] unsignedIntegerValue];
-    self.lastBMoveMs = [[dictionary valueForKey:@"lastBMoveMs"] unsignedIntegerValue];
-    self.finishedMs = [[dictionary valueForKey:@"finishedMs"] unsignedIntegerValue];
-    self.winner = [dictionary valueForKey:@"winner"];
-    self.looser = [dictionary valueForKey:@"looser"];
-    self.isTechWin = [[dictionary valueForKey:@"isTechWin"] boolValue];
+    gameId = [dictionary valueForKey:@"gameId"];
+    state = [[dictionary valueForKey:@"state"] unsignedIntegerValue];
+    playerAName = [dictionary valueForKey:@"playerAName"];
+    playerBName = [dictionary valueForKey:@"playerBName"];
+    currMove = [dictionary valueForKey:@"currMove"];
+    createdMs = [[dictionary valueForKey:@"createdMs"] unsignedIntegerValue];
+    startedMs = [[dictionary valueForKey:@"startedMs"] unsignedIntegerValue];
+    lastAMoveMs = [[dictionary valueForKey:@"lastAMoveMs"] unsignedIntegerValue];
+    lastBMoveMs = [[dictionary valueForKey:@"lastBMoveMs"] unsignedIntegerValue];
+    finishedMs = [[dictionary valueForKey:@"finishedMs"] unsignedIntegerValue];
+    winner = [dictionary valueForKey:@"winner"];
+    looser = [dictionary valueForKey:@"looser"];
+    isTechWin = [[dictionary valueForKey:@"isTechWin"] boolValue];
     
     return self;
 }

@@ -17,7 +17,7 @@ static NSString *const METHOD_URL = @"/getGameState";
 {
     self = [super init];
     if (self) {
-        self.gameId = gameId;
+        gameId = gameId;
     }
     return self;
 }

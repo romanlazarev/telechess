@@ -12,7 +12,7 @@
 @synthesize stateCode;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self.stateCode = [[dictionary valueForKey:@"stateCode"] unsignedIntegerValue];
+    stateCode = [[dictionary valueForKey:@"stateCode"] unsignedIntegerValue];
     return self;
 }
 

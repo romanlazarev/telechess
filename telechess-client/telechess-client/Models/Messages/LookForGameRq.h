@@ -11,9 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LookForGameRq : Message
-@property NSString *userToken;
+@property (nonatomic, copy) NSString *userToken;
 
-- (instancetype)initWithUserToken:(NSString*)userToken;
+- (instancetype)initWithUserToken:(NSString*)token;
 @end
 
 NS_ASSUME_NONNULL_END

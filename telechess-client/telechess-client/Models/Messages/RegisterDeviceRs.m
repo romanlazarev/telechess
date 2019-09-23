@@ -12,7 +12,7 @@
 @synthesize userToken;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self.userToken = [dictionary valueForKey:@"userToken"];
+    userToken = [dictionary valueForKey:@"userToken"];
     return self;
 }
 

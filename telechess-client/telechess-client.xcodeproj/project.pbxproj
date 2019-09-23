@@ -7,29 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5607AAC823323D9A009851EE /* CurrentStateRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AAC723323D9A009851EE /* CurrentStateRq.m */; };
+		5607AACB23324140009851EE /* CurrentStateRs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AACA23324140009851EE /* CurrentStateRs.m */; };
+		5607AACE23328C34009851EE /* LookForGameRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AACD23328C34009851EE /* LookForGameRq.m */; };
+		5607AAD12333811F009851EE /* LookForGameRs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AAD02333811F009851EE /* LookForGameRs.m */; };
+		5607AAD62333B1F2009851EE /* GetGameStateRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AAD52333B1F2009851EE /* GetGameStateRq.m */; };
+		5607AAD92333B222009851EE /* GetGameStateRs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AAD82333B222009851EE /* GetGameStateRs.m */; };
+		5607AADD2334A9E4009851EE /* GameService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AADC2334A9E4009851EE /* GameService.m */; };
+		5607AAE12334DA94009851EE /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607AAE02334DA94009851EE /* Game.m */; };
+		560CA79B232A870100AC7FC7 /* UIStartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560CA79A232A870100AC7FC7 /* UIStartScreenViewController.m */; };
+		560F48BA2338BF6500FBC283 /* UserProfile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48B72338BF4500FBC283 /* UserProfile+CoreDataProperties.m */; };
+		560F48BB2338BF7100FBC283 /* UserProfile+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48B62338BF4500FBC283 /* UserProfile+CoreDataClass.m */; };
 		561047AB231455F60031EA83 /* ChessboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 561047AA231455F60031EA83 /* ChessboardModel.m */; };
 		56174C0922FB3336001C1152 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C0822FB3336001C1152 /* AppDelegate.m */; };
-		56174C0C22FB3336001C1152 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C0B22FB3336001C1152 /* ViewController.m */; };
 		56174C0F22FB3336001C1152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56174C0D22FB3336001C1152 /* Main.storyboard */; };
 		56174C1222FB3336001C1152 /* telechess_client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56174C1022FB3336001C1152 /* telechess_client.xcdatamodeld */; };
 		56174C1422FB3337001C1152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56174C1322FB3337001C1152 /* Assets.xcassets */; };
 		56174C1722FB3337001C1152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56174C1522FB3337001C1152 /* LaunchScreen.storyboard */; };
 		56174C1A22FB3337001C1152 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C1922FB3337001C1152 /* main.m */; };
-		561820E72326F92200D792E4 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 561820E62326F92200D792E4 /* NetworkManager.m */; };
+		561820E72326F92200D792E4 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 561820E62326F92200D792E4 /* NetworkService.m */; };
 		56233FA32301D5A000C9C6C4 /* UIChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 56233FA22301D5A000C9C6C4 /* UIChessPiece.m */; };
 		56233FA62301D87D00C9C6C4 /* UIChessboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */; };
 		5673F6FF23292F6E00DD93C4 /* ChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 5673F6FE23292F6E00DD93C4 /* ChessPiece.m */; };
 		568011A623032B2800BC26D9 /* UIChessboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568011A523032B2800BC26D9 /* UIChessboardView.m */; };
+		56B3E9A1232EB71700482A7B /* RegisterDeviceRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E9A0232EB71700482A7B /* RegisterDeviceRq.m */; };
+		56B3E9A3232F9F6B00482A7B /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E9A2232F9F6B00482A7B /* Message.m */; };
+		56B3E9A5232FBD3D00482A7B /* RegisterDeviceRs.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E9A4232FBD3D00482A7B /* RegisterDeviceRs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5607AAC623323D9A009851EE /* CurrentStateRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentStateRq.h; sourceTree = "<group>"; };
+		5607AAC723323D9A009851EE /* CurrentStateRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentStateRq.m; sourceTree = "<group>"; };
+		5607AAC923324140009851EE /* CurrentStateRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentStateRs.h; sourceTree = "<group>"; };
+		5607AACA23324140009851EE /* CurrentStateRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentStateRs.m; sourceTree = "<group>"; };
+		5607AACC23328C34009851EE /* LookForGameRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookForGameRq.h; sourceTree = "<group>"; };
+		5607AACD23328C34009851EE /* LookForGameRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookForGameRq.m; sourceTree = "<group>"; };
+		5607AACF2333811F009851EE /* LookForGameRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookForGameRs.h; sourceTree = "<group>"; };
+		5607AAD02333811F009851EE /* LookForGameRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookForGameRs.m; sourceTree = "<group>"; };
+		5607AAD223338134009851EE /* Messages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
+		5607AAD42333B1F2009851EE /* GetGameStateRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetGameStateRq.h; sourceTree = "<group>"; };
+		5607AAD52333B1F2009851EE /* GetGameStateRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetGameStateRq.m; sourceTree = "<group>"; };
+		5607AAD72333B222009851EE /* GetGameStateRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetGameStateRs.h; sourceTree = "<group>"; };
+		5607AAD82333B222009851EE /* GetGameStateRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetGameStateRs.m; sourceTree = "<group>"; };
+		5607AADA2333C86F009851EE /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		5607AADB2334A9E4009851EE /* GameService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameService.h; sourceTree = "<group>"; };
+		5607AADC2334A9E4009851EE /* GameService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameService.m; sourceTree = "<group>"; };
+		5607AADF2334DA94009851EE /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		5607AAE02334DA94009851EE /* Game.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		560CA799232A870100AC7FC7 /* UIStartScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIStartScreenViewController.h; sourceTree = "<group>"; };
+		560CA79A232A870100AC7FC7 /* UIStartScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIStartScreenViewController.m; sourceTree = "<group>"; };
+		560F48B42338BF4500FBC283 /* UserProfile+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserProfile+CoreDataProperties.h"; sourceTree = "<group>"; };
+		560F48B52338BF4500FBC283 /* UserProfile+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserProfile+CoreDataClass.h"; sourceTree = "<group>"; };
+		560F48B62338BF4500FBC283 /* UserProfile+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UserProfile+CoreDataClass.m"; sourceTree = "<group>"; };
+		560F48B72338BF4500FBC283 /* UserProfile+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UserProfile+CoreDataProperties.m"; sourceTree = "<group>"; };
 		561047A9231455F60031EA83 /* ChessboardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessboardModel.h; sourceTree = "<group>"; };
 		561047AA231455F60031EA83 /* ChessboardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessboardModel.m; sourceTree = "<group>"; };
 		56174C0422FB3336001C1152 /* telechess-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "telechess-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56174C0722FB3336001C1152 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56174C0822FB3336001C1152 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		56174C0A22FB3336001C1152 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		56174C0B22FB3336001C1152 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		56174C0E22FB3336001C1152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56174C1122FB3336001C1152 /* telechess_client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = telechess_client.xcdatamodel; sourceTree = "<group>"; };
 		56174C1322FB3337001C1152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,8 +72,8 @@
 		56174C1822FB3337001C1152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56174C1922FB3337001C1152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56174C2222FB35C3001C1152 /* UIChessboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessboardView.h; sourceTree = "<group>"; };
-		561820E52326F92200D792E4 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		561820E62326F92200D792E4 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		561820E52326F92200D792E4 /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		561820E62326F92200D792E4 /* NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
 		56233FA12301D5A000C9C6C4 /* UIChessPiece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessPiece.h; sourceTree = "<group>"; };
 		56233FA22301D5A000C9C6C4 /* UIChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIChessPiece.m; sourceTree = "<group>"; };
 		56233FA42301D87D00C9C6C4 /* UIChessboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessboardViewController.h; sourceTree = "<group>"; };
@@ -46,6 +81,12 @@
 		5673F6FD23292F6E00DD93C4 /* ChessPiece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessPiece.h; sourceTree = "<group>"; };
 		5673F6FE23292F6E00DD93C4 /* ChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessPiece.m; sourceTree = "<group>"; };
 		568011A523032B2800BC26D9 /* UIChessboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIChessboardView.m; sourceTree = "<group>"; };
+		56B3E99E232EB6CE00482A7B /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		56B3E99F232EB71700482A7B /* RegisterDeviceRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterDeviceRq.h; sourceTree = "<group>"; };
+		56B3E9A0232EB71700482A7B /* RegisterDeviceRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterDeviceRq.m; sourceTree = "<group>"; };
+		56B3E9A2232F9F6B00482A7B /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		56B3E9A4232FBD3D00482A7B /* RegisterDeviceRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterDeviceRs.m; sourceTree = "<group>"; };
+		56B3E9A6232FBD5F00482A7B /* RegisterDeviceRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterDeviceRs.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +100,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5607AADE2334AC79009851EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				561820E52326F92200D792E4 /* NetworkService.h */,
+				561820E62326F92200D792E4 /* NetworkService.m */,
+				5607AADB2334A9E4009851EE /* GameService.h */,
+				5607AADC2334A9E4009851EE /* GameService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		56174BFB22FB3336001C1152 = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +135,6 @@
 				5673F70023294A2000DD93C4 /* Views */,
 				56174C0722FB3336001C1152 /* AppDelegate.h */,
 				56174C0822FB3336001C1152 /* AppDelegate.m */,
-				56174C0A22FB3336001C1152 /* ViewController.h */,
-				56174C0B22FB3336001C1152 /* ViewController.m */,
 				56174C0D22FB3336001C1152 /* Main.storyboard */,
 				56174C1322FB3337001C1152 /* Assets.xcassets */,
 				56174C1522FB3337001C1152 /* LaunchScreen.storyboard */,
@@ -98,12 +148,16 @@
 		561820E42326F0A700D792E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				56B3E9A72330025A00482A7B /* Data */,
+				56B3E99D232EB69B00482A7B /* Messages */,
+				5607AADE2334AC79009851EE /* Services */,
 				5673F6FD23292F6E00DD93C4 /* ChessPiece.h */,
 				5673F6FE23292F6E00DD93C4 /* ChessPiece.m */,
 				561047A9231455F60031EA83 /* ChessboardModel.h */,
 				561047AA231455F60031EA83 /* ChessboardModel.m */,
-				561820E52326F92200D792E4 /* NetworkManager.h */,
-				561820E62326F92200D792E4 /* NetworkManager.m */,
+				5607AADF2334DA94009851EE /* Game.h */,
+				5607AAE02334DA94009851EE /* Game.m */,
+				5607AADA2333C86F009851EE /* Enums.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +167,8 @@
 			children = (
 				56233FA42301D87D00C9C6C4 /* UIChessboardViewController.h */,
 				56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */,
+				560CA799232A870100AC7FC7 /* UIStartScreenViewController.h */,
+				560CA79A232A870100AC7FC7 /* UIStartScreenViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -126,6 +182,43 @@
 				56233FA22301D5A000C9C6C4 /* UIChessPiece.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		56B3E99D232EB69B00482A7B /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				56B3E99E232EB6CE00482A7B /* Message.h */,
+				56B3E9A2232F9F6B00482A7B /* Message.m */,
+				5607AAD223338134009851EE /* Messages.h */,
+				56B3E99F232EB71700482A7B /* RegisterDeviceRq.h */,
+				56B3E9A0232EB71700482A7B /* RegisterDeviceRq.m */,
+				56B3E9A6232FBD5F00482A7B /* RegisterDeviceRs.h */,
+				56B3E9A4232FBD3D00482A7B /* RegisterDeviceRs.m */,
+				5607AAC623323D9A009851EE /* CurrentStateRq.h */,
+				5607AAC723323D9A009851EE /* CurrentStateRq.m */,
+				5607AAC923324140009851EE /* CurrentStateRs.h */,
+				5607AACA23324140009851EE /* CurrentStateRs.m */,
+				5607AACC23328C34009851EE /* LookForGameRq.h */,
+				5607AACD23328C34009851EE /* LookForGameRq.m */,
+				5607AACF2333811F009851EE /* LookForGameRs.h */,
+				5607AAD02333811F009851EE /* LookForGameRs.m */,
+				5607AAD42333B1F2009851EE /* GetGameStateRq.h */,
+				5607AAD52333B1F2009851EE /* GetGameStateRq.m */,
+				5607AAD72333B222009851EE /* GetGameStateRs.h */,
+				5607AAD82333B222009851EE /* GetGameStateRs.m */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		56B3E9A72330025A00482A7B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				560F48B42338BF4500FBC283 /* UserProfile+CoreDataProperties.h */,
+				560F48B62338BF4500FBC283 /* UserProfile+CoreDataClass.m */,
+				560F48B52338BF4500FBC283 /* UserProfile+CoreDataClass.h */,
+				560F48B72338BF4500FBC283 /* UserProfile+CoreDataProperties.m */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,16 +291,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56174C0C22FB3336001C1152 /* ViewController.m in Sources */,
+				56B3E9A1232EB71700482A7B /* RegisterDeviceRq.m in Sources */,
+				5607AAC823323D9A009851EE /* CurrentStateRq.m in Sources */,
 				5673F6FF23292F6E00DD93C4 /* ChessPiece.m in Sources */,
 				56233FA32301D5A000C9C6C4 /* UIChessPiece.m in Sources */,
-				561820E72326F92200D792E4 /* NetworkManager.m in Sources */,
+				5607AACE23328C34009851EE /* LookForGameRq.m in Sources */,
+				5607AAE12334DA94009851EE /* Game.m in Sources */,
+				560CA79B232A870100AC7FC7 /* UIStartScreenViewController.m in Sources */,
+				561820E72326F92200D792E4 /* NetworkService.m in Sources */,
+				56B3E9A5232FBD3D00482A7B /* RegisterDeviceRs.m in Sources */,
+				5607AAD62333B1F2009851EE /* GetGameStateRq.m in Sources */,
 				568011A623032B2800BC26D9 /* UIChessboardView.m in Sources */,
+				5607AADD2334A9E4009851EE /* GameService.m in Sources */,
+				5607AAD12333811F009851EE /* LookForGameRs.m in Sources */,
 				561047AB231455F60031EA83 /* ChessboardModel.m in Sources */,
 				56233FA62301D87D00C9C6C4 /* UIChessboardViewController.m in Sources */,
 				56174C1222FB3336001C1152 /* telechess_client.xcdatamodeld in Sources */,
 				56174C1A22FB3337001C1152 /* main.m in Sources */,
+				560F48BB2338BF7100FBC283 /* UserProfile+CoreDataClass.m in Sources */,
+				56B3E9A3232F9F6B00482A7B /* Message.m in Sources */,
+				5607AACB23324140009851EE /* CurrentStateRs.m in Sources */,
+				560F48BA2338BF6500FBC283 /* UserProfile+CoreDataProperties.m in Sources */,
 				56174C0922FB3336001C1152 /* AppDelegate.m in Sources */,
+				5607AAD92333B222009851EE /* GetGameStateRs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

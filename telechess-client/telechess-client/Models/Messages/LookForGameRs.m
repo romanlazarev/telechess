@@ -13,8 +13,8 @@
 @synthesize state;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self.gameId = [dictionary valueForKey:@"gameId"];
-    self.state = [[dictionary valueForKey:@"state"] unsignedIntegerValue];
+    gameId = [dictionary valueForKey:@"gameId"];
+    state = [[dictionary valueForKey:@"state"] unsignedIntegerValue];
     return self;
 }
 @end
