@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet UILabel *playerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *victoriesLabel;
-@property (weak, nonatomic) IBOutlet UILabel *loosesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *defeatsLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *toggleGame;
 - (IBAction)toggleGameAction:(id)sender;

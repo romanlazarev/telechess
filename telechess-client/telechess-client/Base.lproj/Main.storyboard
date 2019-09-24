@@ -95,7 +95,7 @@
                                     <constraint firstItem="kOa-9r-mVY" firstAttribute="centerX" secondItem="5l3-jj-Za2" secondAttribute="trailing" id="xBp-Po-6nv"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vus-E2-nM3" userLabel="ToggleGameButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vus-E2-nM3" userLabel="ToggleGameButton">
                                 <rect key="frame" x="121" y="770" width="172" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Look for a game"/>
@@ -119,11 +119,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="mjn-ZA-SXY"/>
                     <connections>
+                        <outlet property="defeatsLabel" destination="R4C-84-mPU" id="srt-fG-V4F"/>
                         <outlet property="loadIndicator" destination="HRr-Ea-Szc" id="FE9-Wy-EU2"/>
                         <outlet property="loadingStateLabel" destination="zAY-B7-A7O" id="dbU-n8-9oV"/>
                         <outlet property="playerNameLabel" destination="5l3-jj-Za2" id="3Ds-kq-A8A"/>
                         <outlet property="playerView" destination="sLu-JI-ccO" id="bb4-aN-E6B"/>
                         <outlet property="toggleGame" destination="Vus-E2-nM3" id="VDu-dX-R1h"/>
+                        <outlet property="victoriesLabel" destination="frC-vD-I1D" id="7iO-Ui-JA6"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="to-chessboard" id="fka-EV-H5e"/>
                     </connections>
                 </viewController>
@@ -131,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="-775.36231884057975" y="20.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="UIGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,6 +145,9 @@
                                 <rect key="frame" x="108" y="442" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="exitGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKW-7R-XY6"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-4h-UI6">
                                 <rect key="frame" x="20" y="44" width="374" height="379"/>

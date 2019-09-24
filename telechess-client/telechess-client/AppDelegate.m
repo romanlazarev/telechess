@@ -17,13 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[GameService sharedInstance] loadUserProfile];
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *firstVC = [storyboard instantiateInitialViewController];
     self.window = [[UIApplication sharedApplication].windows lastObject];
     self.window.rootViewController = firstVC;
     [self.window makeKeyAndVisible];
-    //self.window = //UIWindow(frame: UIScreen.mainScreen().bounds)
-    
+
     return YES;
 }
 

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "GameService.h"
 #import "NetworkService.h"
-#import "../Messages/Messages.h"
+#import "../Messages/Messages.pch"
 
 @implementation GameService {
     NSString *userToken;
@@ -31,6 +31,8 @@
 @synthesize isInGame;
 @synthesize isLookingForGame;
 @synthesize activeGame;
+@synthesize victories;
+@synthesize defeats;
 
 @synthesize persistentContainer = _persistentContainer;
 
@@ -59,8 +61,11 @@
     
     CurrentStateRq *messageRq = [[CurrentStateRq alloc] initWithUserToken:userToken];
     CurrentStateRs *response = (CurrentStateRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[CurrentStateRs class]];
+    victories = response.victories;
+    defeats = response.defeats;
     
     lastUserState = response.stateCode;
+    isInGame = lastUserState == kInGame; // TODO remove this
     return response.stateCode;
 }
 
@@ -102,8 +107,16 @@
     isLookingForGame = NO;
 }
 
+- (void)exitFromGame {
+    if([self userTokenProvided] == NO || isInGame == NO /*|| activeGameId || activeGameId.length == 0*/ )
+        return;
+    
+    ExitGameRq *messageRq = [[ExitGameRq alloc] initWithUserToken:userToken andGameId:activeGameId];
+    ExitGameRs *response = (ExitGameRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[ExitGameRs class]];
+}
+
 - (BOOL)userTokenProvided {
-    return (userToken != NULL && [userToken length] >= 0);
+    return (userToken != NULL && userToken.length >= 0);
 }
 
 - (void)loadUserProfile {
@@ -140,6 +153,9 @@
     profile.userToken = userToken;
     
     [context save:&error];
+    if(error) {
+        NSLog(@"Error occured while saving Core Data context:\n%@", error);
+    }
 }
 
 /*- (LookForGameRs*)lookForGame:(NSString*)userToken {

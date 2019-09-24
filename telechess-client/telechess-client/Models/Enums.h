@@ -11,27 +11,34 @@
 
 // Коды состояние пользователя
 typedef NS_ENUM(NSUInteger, UserStateCode) {
-    kIdle = 0,
-    kInGame = 1,
-    kUnknownToken = 100
+    kIdle = 0,              // Пользователь не в игре
+    kInGame = 1,            // Пользователь в игре
+    kUnknownToken = 100     // Токен не распознан (незарегистрированный пользователь)
 };
 
 // Коды состояния игры
 typedef NS_ENUM(NSUInteger, GameStateCode) {
-    kGameWaitingPlayers = 0,
-    kGameWaitingAccept = 5,
-    kGameStarted = 10,
-    kGameFinished = 15
+    kGameWaitingPlayers = 0, // Ожидание игроков
+    kGameWaitingAccept = 5,  // Ожидание ответа от игроков
+    kGameStarted = 10,       // Игра начата
+    kGameFinished = 15       // Игра окончена
 };
 
-//
+// Коды результата выхода из игры
+typedef NS_ENUM(NSUInteger, ExitGameResultCode) {
+    kWithoutPenalty = 0,    // Без штрафа за выход
+    kWin = 1,               // Выход с победой (противник вышел раньше)
+    kDefeat = 2             // Выход с поражением
+};
+
+// Коды типов фигур
 typedef NS_ENUM(NSUInteger, CPType) {
-    kPawn,
-    kRook,
-    kKnight,
-    kBishop,
-    kQueen,
-    kKing
+    kPawn,                  // Пешка
+    kRook,                  // Ладья
+    kKnight,                // Конь
+    kBishop,                // Офицер
+    kQueen,                 // Ферзь
+    kKing                   // Король
 };
 
 //

@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CurrentStateRs : Message
 @property (nonatomic, readonly) NSUInteger stateCode;
+@property (nonatomic, readonly) NSUInteger victories;
+@property (nonatomic, readonly) NSUInteger defeats;
 @end
 
 NS_ASSUME_NONNULL_END

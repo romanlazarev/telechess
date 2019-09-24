@@ -10,9 +10,13 @@
 
 @implementation CurrentStateRs
 @synthesize stateCode;
+@synthesize victories;
+@synthesize defeats;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     stateCode = [[dictionary valueForKey:@"stateCode"] unsignedIntegerValue];
+    victories = [[dictionary valueForKey:@"victories"] unsignedIntegerValue];
+    defeats = [[dictionary valueForKey:@"defeats"] unsignedIntegerValue];
     return self;
 }
 

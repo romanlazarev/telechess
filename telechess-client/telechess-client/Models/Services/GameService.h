@@ -18,6 +18,8 @@
 
 @property (nonatomic, copy, readonly) NSString *playerName;
 @property (nonatomic, readonly) UserStateCode lastUserState;
+@property (nonatomic, readonly) NSUInteger victories;
+@property (nonatomic, readonly) NSUInteger defeats;
 @property (nonatomic, readonly) BOOL playerRegistered;
 @property (atomic, readonly) BOOL isInGame;
 @property (atomic, readonly) BOOL isLookingForGame;

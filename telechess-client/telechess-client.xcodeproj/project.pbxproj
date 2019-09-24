@@ -18,6 +18,9 @@
 		560CA79B232A870100AC7FC7 /* UIStartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560CA79A232A870100AC7FC7 /* UIStartScreenViewController.m */; };
 		560F48BA2338BF6500FBC283 /* UserProfile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48B72338BF4500FBC283 /* UserProfile+CoreDataProperties.m */; };
 		560F48BB2338BF7100FBC283 /* UserProfile+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48B62338BF4500FBC283 /* UserProfile+CoreDataClass.m */; };
+		560F48BE233A5EB900FBC283 /* ExitGameRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48BD233A5EB900FBC283 /* ExitGameRq.m */; };
+		560F48C1233A5ECC00FBC283 /* ExitGameRs.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48C0233A5ECC00FBC283 /* ExitGameRs.m */; };
+		560F48C5233A720600FBC283 /* UIGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48C4233A720600FBC283 /* UIGameViewController.m */; };
 		561047AB231455F60031EA83 /* ChessboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 561047AA231455F60031EA83 /* ChessboardModel.m */; };
 		56174C0922FB3336001C1152 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C0822FB3336001C1152 /* AppDelegate.m */; };
 		56174C0F22FB3336001C1152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56174C0D22FB3336001C1152 /* Main.storyboard */; };
@@ -44,7 +47,7 @@
 		5607AACD23328C34009851EE /* LookForGameRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookForGameRq.m; sourceTree = "<group>"; };
 		5607AACF2333811F009851EE /* LookForGameRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookForGameRs.h; sourceTree = "<group>"; };
 		5607AAD02333811F009851EE /* LookForGameRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookForGameRs.m; sourceTree = "<group>"; };
-		5607AAD223338134009851EE /* Messages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
+		5607AAD223338134009851EE /* Messages.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messages.pch; sourceTree = "<group>"; };
 		5607AAD42333B1F2009851EE /* GetGameStateRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetGameStateRq.h; sourceTree = "<group>"; };
 		5607AAD52333B1F2009851EE /* GetGameStateRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetGameStateRq.m; sourceTree = "<group>"; };
 		5607AAD72333B222009851EE /* GetGameStateRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetGameStateRs.h; sourceTree = "<group>"; };
@@ -60,6 +63,12 @@
 		560F48B52338BF4500FBC283 /* UserProfile+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserProfile+CoreDataClass.h"; sourceTree = "<group>"; };
 		560F48B62338BF4500FBC283 /* UserProfile+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UserProfile+CoreDataClass.m"; sourceTree = "<group>"; };
 		560F48B72338BF4500FBC283 /* UserProfile+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UserProfile+CoreDataProperties.m"; sourceTree = "<group>"; };
+		560F48BC233A5EB900FBC283 /* ExitGameRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExitGameRq.h; sourceTree = "<group>"; };
+		560F48BD233A5EB900FBC283 /* ExitGameRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExitGameRq.m; sourceTree = "<group>"; };
+		560F48BF233A5ECC00FBC283 /* ExitGameRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExitGameRs.h; sourceTree = "<group>"; };
+		560F48C0233A5ECC00FBC283 /* ExitGameRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExitGameRs.m; sourceTree = "<group>"; };
+		560F48C3233A720600FBC283 /* UIGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIGameViewController.h; sourceTree = "<group>"; };
+		560F48C4233A720600FBC283 /* UIGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIGameViewController.m; sourceTree = "<group>"; };
 		561047A9231455F60031EA83 /* ChessboardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessboardModel.h; sourceTree = "<group>"; };
 		561047AA231455F60031EA83 /* ChessboardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessboardModel.m; sourceTree = "<group>"; };
 		56174C0422FB3336001C1152 /* telechess-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "telechess-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +178,8 @@
 				56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */,
 				560CA799232A870100AC7FC7 /* UIStartScreenViewController.h */,
 				560CA79A232A870100AC7FC7 /* UIStartScreenViewController.m */,
+				560F48C3233A720600FBC283 /* UIGameViewController.h */,
+				560F48C4233A720600FBC283 /* UIGameViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,7 +200,7 @@
 			children = (
 				56B3E99E232EB6CE00482A7B /* Message.h */,
 				56B3E9A2232F9F6B00482A7B /* Message.m */,
-				5607AAD223338134009851EE /* Messages.h */,
+				5607AAD223338134009851EE /* Messages.pch */,
 				56B3E99F232EB71700482A7B /* RegisterDeviceRq.h */,
 				56B3E9A0232EB71700482A7B /* RegisterDeviceRq.m */,
 				56B3E9A6232FBD5F00482A7B /* RegisterDeviceRs.h */,
@@ -206,6 +217,10 @@
 				5607AAD52333B1F2009851EE /* GetGameStateRq.m */,
 				5607AAD72333B222009851EE /* GetGameStateRs.h */,
 				5607AAD82333B222009851EE /* GetGameStateRs.m */,
+				560F48BC233A5EB900FBC283 /* ExitGameRq.h */,
+				560F48BD233A5EB900FBC283 /* ExitGameRq.m */,
+				560F48BF233A5ECC00FBC283 /* ExitGameRs.h */,
+				560F48C0233A5ECC00FBC283 /* ExitGameRs.m */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -295,12 +310,15 @@
 				5607AAC823323D9A009851EE /* CurrentStateRq.m in Sources */,
 				5673F6FF23292F6E00DD93C4 /* ChessPiece.m in Sources */,
 				56233FA32301D5A000C9C6C4 /* UIChessPiece.m in Sources */,
+				560F48C5233A720600FBC283 /* UIGameViewController.m in Sources */,
 				5607AACE23328C34009851EE /* LookForGameRq.m in Sources */,
 				5607AAE12334DA94009851EE /* Game.m in Sources */,
+				560F48BE233A5EB900FBC283 /* ExitGameRq.m in Sources */,
 				560CA79B232A870100AC7FC7 /* UIStartScreenViewController.m in Sources */,
 				561820E72326F92200D792E4 /* NetworkService.m in Sources */,
 				56B3E9A5232FBD3D00482A7B /* RegisterDeviceRs.m in Sources */,
 				5607AAD62333B1F2009851EE /* GetGameStateRq.m in Sources */,
+				560F48C1233A5ECC00FBC283 /* ExitGameRs.m in Sources */,
 				568011A623032B2800BC26D9 /* UIChessboardView.m in Sources */,
 				5607AADD2334A9E4009851EE /* GameService.m in Sources */,
 				5607AAD12333811F009851EE /* LookForGameRs.m in Sources */,

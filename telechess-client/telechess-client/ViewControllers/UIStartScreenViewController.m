@@ -8,7 +8,7 @@
 
 #import "UIStartScreenViewController.h"
 #import "UIChessboardViewController.h"
-#import "../Models/Messages/Messages.h"
+#import "../Models/Messages/Messages.pch"
 #import "../Models/Services/NetworkService.h"
 #import "../Models/Services/GameService.h"
 
@@ -90,7 +90,7 @@
     NSString *nickname = [[GameService sharedInstance] playerName];
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = @"name";
-        textField.textColor = [UIColor blueColor];
+        //textField.textColor = [UIColor blueColor];
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.text = nickname;
@@ -146,6 +146,8 @@
     GameService *gs = [GameService sharedInstance];
     if(_playerNameLabel) {
         _playerNameLabel.text = gs.playerName;
+        _victoriesLabel.text = [NSString stringWithFormat:@"%lu", gs.victories];
+        _defeatsLabel.text = [NSString stringWithFormat:@"%lu", gs.defeats];
     }
     
     if(_playerView) {
