@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "Enums.h"
-
+#import "CPPosition.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChessPiece : NSObject
-@property CPType type;
-@property CPSide side;
+@property (readonly) CPType type;
+@property (readonly) CPSide side;
+@property (readonly) struct CPPosition position;
 
 -(id)initWithType:(CPType)type andSide:(CPSide)side;
+-(id)initWithType:(CPType)type andSide:(CPSide)side andPosition:(struct CPPosition)pos;
 
 @end
 

@@ -9,6 +9,7 @@
 #import "UIChessboardViewController.h"
 #import "UIChessPiece.h"
 #import "GameService.h"
+#import "AppConstants.h"
 
 @interface UIChessboardViewController ()
 
@@ -53,7 +54,10 @@
             updates++;
             NSLog(@"Update number: %ld", updates);
             [gs getRemoteGameState];
-            [NSThread sleepForTimeInterval:2.f];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[self view] setNeedsDisplay];
+            });
+            [NSThread sleepForTimeInterval:GET_REMOTE_GAME_STATE_INTERVAL_SEC];
         }
         self->_updatingCycleIsActive = NO;
     });
@@ -65,34 +69,6 @@
 
 - (void)initInternals {
     self.chessboardModel = [[ChessboardModel alloc] init];
-    
-    self.blackKingImage = [UIImage imageNamed:@"black_king"];
-    self.blackQueenImage = [UIImage imageNamed:@"black_queen"];
-    self.blackBishopImage = [UIImage imageNamed:@"black_bishop"];
-    self.blackKnightImage = [UIImage imageNamed:@"black_knight"];
-    self.blackRookImage = [UIImage imageNamed:@"black_rook"];
-    self.blackPawnImage = [UIImage imageNamed:@"black_pawn"];
-    
-    self.whiteKingImage = [UIImage imageNamed:@"white_king"];
-    self.whiteQueenImage = [UIImage imageNamed:@"white_queen"];
-    self.whiteBishopImage = [UIImage imageNamed:@"white_bishop"];
-    self.whiteKnightImage = [UIImage imageNamed:@"white_knight"];
-    self.whiteRookImage = [UIImage imageNamed:@"white_rook"];
-    self.whitePawnImage = [UIImage imageNamed:@"white_pawn"];
-
-    
-    CGFloat cellSize = self.view.cellSize;
-    for(NSUInteger row=0; row<8; row++) {
-        for(NSUInteger col=0; col<8; col++) {
-            ChessPiece* piece = [chessboardModel getPieceByX:col andY:row];
-            if(piece != NULL) {
-                UIChessPiece* subview = [[UIChessPiece alloc]
-                                         initWithImage:[self getImageByType:piece.type andSide:piece.side]
-                                         andRect:CGRectMake(2+row*cellSize, col*cellSize, cellSize, cellSize)];
-                [self.view addSubview:subview];
-            }
-        }
-    }
 }
 
 - (UIChessboardView*) getView {
@@ -101,42 +77,15 @@
 
 - (IBAction)chessboardTapped:(UITapGestureRecognizer *)recognizer {
     CGPoint location = [recognizer locationInView:[recognizer.view superview]];
-    NSLog(@"Detected tap: x=%f, y=%f", location.x, location.y);
+    //NSLog(@"Detected tap: x=%f, y=%f", location.x, location.y);
+    ChessPiece *cp = [[self view] chessPieceInPoint:location];
+    if(cp) {
+        NSLog(@"%@", cp);
+    }
 }
 
--(UIImage*)getImageByType:(CPType)type andSide:(CPSide)side {
-    if(side == kWhiteSide) {
-        switch (type) {
-            case kPawn:
-                return self.whitePawnImage;
-            case kRook:
-                return self.whiteRookImage;
-            case kKnight:
-                return self.whiteKnightImage;
-            case kBishop:
-                return self.whiteBishopImage;
-            case kKing:
-                return self.whiteKingImage;
-            case kQueen:
-                return self.whiteQueenImage;
-        }
-    } else if(side == kBlackSide) {
-        switch (type) {
-            case kPawn:
-                return self.blackPawnImage;
-            case kRook:
-                return self.blackRookImage;
-            case kKnight:
-                return self.blackKnightImage;
-            case kBishop:
-                return self.blackBishopImage;
-            case kKing:
-                return self.blackKingImage;
-            case kQueen:
-                return self.blackQueenImage;
-        }
-    }
-    return NULL;
+- (UIChessboardView *)view {
+    return (UIChessboardView*)[super view];
 }
 
 @end

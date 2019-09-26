@@ -46,20 +46,20 @@
     GameService *gs = [GameService sharedInstance];
     if(gs.isLookingForGame) {
         [gs stopLookForGame];
-        [_toggleGame setTitle:kLookForGameTitle forState:UIControlStateNormal];
+        [_toggleGame setTitle:LOOK_FOR_GAME_TITLE forState:UIControlStateNormal];
         [self stopLoading];
     } else {
         [gs lookForGame:^(NSString *gameId) {
             [self performSegueWithIdentifier:@"to-chessboard" sender:self];
         }];
-        [_toggleGame setTitle:kStopLookingForGameTitle forState:UIControlStateNormal];
+        [_toggleGame setTitle:STOP_LOOKING_FOR_GAME_TITLE forState:UIControlStateNormal];
         [self startLoading];
     }
 }
 
 - (void)refreshToggleTitle {
     [_toggleGame setTitle: [GameService sharedInstance].isLookingForGame ?
-                    kStopLookingForGameTitle : kLookForGameTitle
+                    STOP_LOOKING_FOR_GAME_TITLE : LOOK_FOR_GAME_TITLE
                  forState:UIControlStateNormal];
 }
 

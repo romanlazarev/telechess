@@ -7,9 +7,8 @@
 //
 
 #import "NetworkService.h"
+#import "AppConstants.h"
 
-NSString *const SERVICE_HOST_URL = @"https://us-central1-chess-game-48719.cloudfunctions.net";
-NSUInteger const URL_REQUEST_TIMEOUT = 15;
 
 @implementation NetworkService
 

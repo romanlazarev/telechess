@@ -12,14 +12,29 @@
 
 @synthesize side;
 @synthesize type;
+@synthesize position;
 
--(id)initWithType:(CPType)type andSide:(CPSide)side {
+
+-(id)initWithType:(CPType)aType andSide:(CPSide)aSide {
     self = [super init];
     if(self) {
-        self.type = type;
-        self.side = side;
+        type = aType;
+        side = aSide;
     }
     return self;
+}
+
+- (id)initWithType:(CPType)type andSide:(CPSide)side andPosition:(struct CPPosition)pos {
+    self = [self initWithType:type andSide:side];
+    if(self) {
+        position = pos;
+    }
+    return self;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"type: %lu, side: %lu, row: %li, col: %li", type, side, position.row, position.col];
 }
 
 @end

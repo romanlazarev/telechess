@@ -14,9 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIChessboardViewController : UIViewController
 
-@property UIColor *boxBorderColor;
-
-@property UIImage *blackKingImage;
+/*@property UIImage *blackKingImage;
 @property UIImage *blackQueenImage;
 @property UIImage *blackBishopImage;
 @property UIImage *blackKnightImage;
@@ -28,13 +26,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property UIImage *whiteBishopImage;
 @property UIImage *whiteKnightImage;
 @property UIImage *whiteRookImage;
-@property UIImage *whitePawnImage;
+@property UIImage *whitePawnImage;*/
 
 @property ChessboardModel *chessboardModel;
 
 //@property UIChessboardView view
-@property (readonly, getter=getView) UIChessboardView *view;
+//@property (readonly, getter=getView) UIChessboardView *view;
 //@property IBOutlet UIChessboardView *chessView;
+
+- (UIChessboardView *)view;
 
 @end
 

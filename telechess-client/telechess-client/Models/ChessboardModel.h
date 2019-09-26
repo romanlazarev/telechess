@@ -11,12 +11,12 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-@interface CPPosition
+/*@interface CPPosition
 @property NSString *rowLetter;
 @property NSInteger colNumber;
 @property (readonly, getter=getX) NSInteger x;
 @property (readonly, getter=getY) NSInteger y;
-@end
+@end*/
 
 @interface ChessboardModel : NSObject {
     ChessPiece* pieces[8][8];

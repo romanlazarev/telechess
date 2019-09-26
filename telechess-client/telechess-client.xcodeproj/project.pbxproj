@@ -79,6 +79,7 @@
 		560F48CB233B78A800FBC283 /* SetGameStateRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetGameStateRs.m; sourceTree = "<group>"; };
 		561047A9231455F60031EA83 /* ChessboardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessboardModel.h; sourceTree = "<group>"; };
 		561047AA231455F60031EA83 /* ChessboardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessboardModel.m; sourceTree = "<group>"; };
+		56166220233CDFEA00E8D2E4 /* CPPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPPosition.h; sourceTree = "<group>"; };
 		56174C0422FB3336001C1152 /* telechess-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "telechess-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56174C0722FB3336001C1152 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56174C0822FB3336001C1152 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 				5607AADF2334DA94009851EE /* Game.h */,
 				5607AAE02334DA94009851EE /* Game.m */,
 				5607AADA2333C86F009851EE /* Enums.h */,
+				56166220233CDFEA00E8D2E4 /* CPPosition.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";

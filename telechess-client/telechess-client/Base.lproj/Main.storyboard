@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fSv-Y4-ndB">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -13,7 +13,7 @@
             <objects>
                 <navigationController id="fSv-Y4-ndB" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mjq-FZ-70r">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,21 +29,21 @@
             <objects>
                 <viewController id="c00-k4-1jc" customClass="UIStartScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6QZ-gs-vyI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAY-B7-A7O">
-                                <rect key="frame" x="153" y="471.5" width="108" height="21"/>
+                                <rect key="frame" x="279.5" y="211" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HRr-Ea-Szc">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <rect key="frame" x="315" y="169" width="37" height="37"/>
                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLu-JI-ccO" userLabel="PlayerView">
-                                <rect key="frame" x="82" y="148" width="250" height="250"/>
+                                <rect key="frame" x="208.5" y="92" width="250" height="250"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayerName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l3-jj-Za2" userLabel="PlayerName">
                                         <rect key="frame" x="35" y="10" width="180" height="21"/>
@@ -96,7 +96,7 @@
                                 </constraints>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vus-E2-nM3" userLabel="ToggleGameButton">
-                                <rect key="frame" x="121" y="770" width="172" height="42"/>
+                                <rect key="frame" x="247.5" y="283" width="172" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Look for a game"/>
                                 <connections>
@@ -138,27 +138,80 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="UIGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hny-Hz-Jd0">
-                                <rect key="frame" x="108" y="442" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="exitGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKW-7R-XY6"/>
-                                </connections>
-                            </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-4h-UI6">
-                                <rect key="frame" x="20" y="44" width="374" height="379"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-4h-UI6">
+                                <rect key="frame" x="101" y="-250" width="758" height="333"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="8ph-4h-UI6" secondAttribute="width" multiplier="1.4:1" id="493-qq-TbC"/>
+                                    <constraint firstAttribute="width" secondItem="8ph-4h-UI6" secondAttribute="height" multiplier="1.4:1" id="Jve-N5-991"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jve-N5-991"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="493-qq-TbC"/>
+                                        <include reference="Jve-N5-991"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Jve-N5-991"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="lK9-o8-fJd" kind="embed" id="YRt-1N-soF"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hny-Hz-Jd0" userLabel="Exit game">
+                                <rect key="frame" x="280.5" y="293" width="106" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Exit game"/>
+                                <connections>
+                                    <action selector="exitGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKW-7R-XY6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ph-4h-UI6" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" constant="-10" id="3QY-sZ-xZX"/>
+                            <constraint firstItem="hny-Hz-Jd0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SCV-Az-Rse"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hny-Hz-Jd0" secondAttribute="bottom" constant="40" id="a5T-zZ-FsM"/>
+                            <constraint firstItem="8ph-4h-UI6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ihW-7R-6Y9"/>
+                            <constraint firstItem="8ph-4h-UI6" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" constant="-10" id="n0q-hx-x5s"/>
+                            <constraint firstItem="8ph-4h-UI6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ncy-EV-CP4"/>
+                            <constraint firstItem="hny-Hz-Jd0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="10" id="ppQ-qf-dIJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ppQ-qf-dIJ"/>
+                                <exclude reference="3QY-sZ-xZX"/>
+                                <exclude reference="n0q-hx-x5s"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="ppQ-qf-dIJ"/>
+                                <include reference="3QY-sZ-xZX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="ppQ-qf-dIJ"/>
+                                <include reference="3QY-sZ-xZX"/>
+                                <exclude reference="SCV-Az-Rse"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="n0q-hx-x5s"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -170,7 +223,7 @@
             <objects>
                 <viewController id="lK9-o8-fJd" customClass="UIChessboardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WtQ-2X-fTr" customClass="UIChessboardView">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="379"/>
+                        <rect key="frame" x="0.0" y="0.0" width="758" height="333"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -187,7 +240,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="48" y="576"/>
+            <point key="canvasLocation" x="48" y="1180"/>
         </scene>
     </scenes>
 </document>

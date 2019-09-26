@@ -104,7 +104,7 @@
                 break;
             }
             
-            [NSThread sleepForTimeInterval:1.0f];
+            [NSThread sleepForTimeInterval:LOOK_FOR_GAME_INTERVAL_SEC];
             try++;
         }
 
