@@ -8,9 +8,10 @@
 
 #import "UIStartScreenViewController.h"
 #import "UIChessboardViewController.h"
-#import "../Models/Messages/Messages.pch"
+#import "../Models/Messages/Messages.h"
 #import "../Models/Services/NetworkService.h"
 #import "../Models/Services/GameService.h"
+#import "AppConstants.h"
 
 @interface UIStartScreenViewController ()
 
@@ -20,6 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self hidePlayerInfo];
+    [self refreshToggleTitle];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -32,44 +40,27 @@
     } else {
         [self afterRegister];
     }
-    
-    /*NSString* userToken = [self registerDevice];
-    [self fetchCurrentState:userToken];
-    NSUInteger maxIterations = 4;
-    NSUInteger i = 0;
-    NSString *gameId = NULL;
-    while (i <= maxIterations) {
-        LookForGameRs *response = [self lookForGame:userToken];
-        if (response.state == kGameStarted) {
-            gameId = response.gameId;
-            break;
-        }
-        [NSThread sleepForTimeInterval:1.0f];
-        i++;
-    }
-    
-    if(gameId) {
-        GetGameStateRs *response = [self getGameState:gameId];
-        NSLog(@"Game: %@", response);
-    }*/
-    
-    
 }
 
 - (void)toggleGameAction:(id)sender {
     GameService *gs = [GameService sharedInstance];
     if(gs.isLookingForGame) {
         [gs stopLookForGame];
-        [_toggleGame setTitle:@"Look for a game" forState:UIControlStateNormal];
+        [_toggleGame setTitle:kLookForGameTitle forState:UIControlStateNormal];
         [self stopLoading];
     } else {
         [gs lookForGame:^(NSString *gameId) {
             [self performSegueWithIdentifier:@"to-chessboard" sender:self];
         }];
-        [_toggleGame setTitle:@"Stop" forState:UIControlStateNormal];
+        [_toggleGame setTitle:kStopLookingForGameTitle forState:UIControlStateNormal];
         [self startLoading];
     }
-    //
+}
+
+- (void)refreshToggleTitle {
+    [_toggleGame setTitle: [GameService sharedInstance].isLookingForGame ?
+                    kStopLookingForGameTitle : kLookForGameTitle
+                 forState:UIControlStateNormal];
 }
 
 - (void)afterRegister {

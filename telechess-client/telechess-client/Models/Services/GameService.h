@@ -12,6 +12,7 @@
 #import "UserProfile+CoreDataProperties.h"
 #import "Game.h"
 #import "Enums.h"
+#import "AppConstants.h"
 
 @interface GameService : NSObject
 + (instancetype)sharedInstance;
@@ -39,6 +40,7 @@
 - (void)stopLookForGame;
 - (void)exitFromGame;
 
-- (void)updateGameState;
+- (void)getRemoteGameState;
+- (void)setRemoteGameState;
 
 @end

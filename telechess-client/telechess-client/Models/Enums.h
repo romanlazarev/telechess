@@ -33,18 +33,20 @@ typedef NS_ENUM(NSUInteger, ExitGameResultCode) {
 
 // Коды типов фигур
 typedef NS_ENUM(NSUInteger, CPType) {
-    kPawn,                  // Пешка
-    kRook,                  // Ладья
-    kKnight,                // Конь
-    kBishop,                // Офицер
-    kQueen,                 // Ферзь
-    kKing                   // Король
+    // 0 - empty
+    kPawn = 1,                  // Пешка
+    kRook = 2,                  // Ладья
+    kKnight = 3,                // Конь
+    kBishop = 4,                // Офицер
+    kQueen = 5,                 // Ферзь
+    kKing = 6                   // Король
 };
 
 //
 typedef NS_ENUM(NSUInteger, CPSide) {
-    kWhite=1,
-    kBlack=2
+    kUndefinedSide = 0,
+    kWhiteSide = 1,
+    kBlackSide = 2
 };
 
 #endif /* Enums_h */

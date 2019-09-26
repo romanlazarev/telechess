@@ -18,6 +18,8 @@
 #include "LookForGameRs.h"
 #include "GetGameStateRq.h"
 #include "GetGameStateRs.h"
+#include "SetGameStateRq.h"
+#include "SetGameStateRs.h"
 #include "ExitGameRq.h"
 #include "ExitGameRs.h"
 

@@ -38,7 +38,9 @@
     UIAlertAction* yesAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault
        handler:^(UIAlertAction * action) {
         GameService *gs = [GameService sharedInstance];
-        [gs exitFromGame];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [gs exitFromGame];
+        });
         [self afterConfirm];
     }];
 

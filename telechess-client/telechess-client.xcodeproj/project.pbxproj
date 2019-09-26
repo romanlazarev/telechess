@@ -21,6 +21,8 @@
 		560F48BE233A5EB900FBC283 /* ExitGameRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48BD233A5EB900FBC283 /* ExitGameRq.m */; };
 		560F48C1233A5ECC00FBC283 /* ExitGameRs.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48C0233A5ECC00FBC283 /* ExitGameRs.m */; };
 		560F48C5233A720600FBC283 /* UIGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48C4233A720600FBC283 /* UIGameViewController.m */; };
+		560F48C9233B788E00FBC283 /* SetGameStateRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48C8233B788E00FBC283 /* SetGameStateRq.m */; };
+		560F48CC233B78A800FBC283 /* SetGameStateRs.m in Sources */ = {isa = PBXBuildFile; fileRef = 560F48CB233B78A800FBC283 /* SetGameStateRs.m */; };
 		561047AB231455F60031EA83 /* ChessboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 561047AA231455F60031EA83 /* ChessboardModel.m */; };
 		56174C0922FB3336001C1152 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56174C0822FB3336001C1152 /* AppDelegate.m */; };
 		56174C0F22FB3336001C1152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56174C0D22FB3336001C1152 /* Main.storyboard */; };
@@ -31,6 +33,7 @@
 		561820E72326F92200D792E4 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 561820E62326F92200D792E4 /* NetworkService.m */; };
 		56233FA32301D5A000C9C6C4 /* UIChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 56233FA22301D5A000C9C6C4 /* UIChessPiece.m */; };
 		56233FA62301D87D00C9C6C4 /* UIChessboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */; };
+		564E7726233BBECA00F7FF23 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 564E7725233BBECA00F7FF23 /* AppConstants.m */; };
 		5673F6FF23292F6E00DD93C4 /* ChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 5673F6FE23292F6E00DD93C4 /* ChessPiece.m */; };
 		568011A623032B2800BC26D9 /* UIChessboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 568011A523032B2800BC26D9 /* UIChessboardView.m */; };
 		56B3E9A1232EB71700482A7B /* RegisterDeviceRq.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B3E9A0232EB71700482A7B /* RegisterDeviceRq.m */; };
@@ -47,7 +50,7 @@
 		5607AACD23328C34009851EE /* LookForGameRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookForGameRq.m; sourceTree = "<group>"; };
 		5607AACF2333811F009851EE /* LookForGameRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookForGameRs.h; sourceTree = "<group>"; };
 		5607AAD02333811F009851EE /* LookForGameRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookForGameRs.m; sourceTree = "<group>"; };
-		5607AAD223338134009851EE /* Messages.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messages.pch; sourceTree = "<group>"; };
+		5607AAD223338134009851EE /* Messages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
 		5607AAD42333B1F2009851EE /* GetGameStateRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetGameStateRq.h; sourceTree = "<group>"; };
 		5607AAD52333B1F2009851EE /* GetGameStateRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetGameStateRq.m; sourceTree = "<group>"; };
 		5607AAD72333B222009851EE /* GetGameStateRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetGameStateRs.h; sourceTree = "<group>"; };
@@ -69,6 +72,11 @@
 		560F48C0233A5ECC00FBC283 /* ExitGameRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExitGameRs.m; sourceTree = "<group>"; };
 		560F48C3233A720600FBC283 /* UIGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIGameViewController.h; sourceTree = "<group>"; };
 		560F48C4233A720600FBC283 /* UIGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIGameViewController.m; sourceTree = "<group>"; };
+		560F48C6233B527600FBC283 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		560F48C7233B788E00FBC283 /* SetGameStateRq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetGameStateRq.h; sourceTree = "<group>"; };
+		560F48C8233B788E00FBC283 /* SetGameStateRq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetGameStateRq.m; sourceTree = "<group>"; };
+		560F48CA233B78A800FBC283 /* SetGameStateRs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetGameStateRs.h; sourceTree = "<group>"; };
+		560F48CB233B78A800FBC283 /* SetGameStateRs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetGameStateRs.m; sourceTree = "<group>"; };
 		561047A9231455F60031EA83 /* ChessboardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessboardModel.h; sourceTree = "<group>"; };
 		561047AA231455F60031EA83 /* ChessboardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessboardModel.m; sourceTree = "<group>"; };
 		56174C0422FB3336001C1152 /* telechess-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "telechess-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +95,7 @@
 		56233FA22301D5A000C9C6C4 /* UIChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIChessPiece.m; sourceTree = "<group>"; };
 		56233FA42301D87D00C9C6C4 /* UIChessboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIChessboardViewController.h; sourceTree = "<group>"; };
 		56233FA52301D87D00C9C6C4 /* UIChessboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIChessboardViewController.m; sourceTree = "<group>"; };
+		564E7725233BBECA00F7FF23 /* AppConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 		5673F6FD23292F6E00DD93C4 /* ChessPiece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessPiece.h; sourceTree = "<group>"; };
 		5673F6FE23292F6E00DD93C4 /* ChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChessPiece.m; sourceTree = "<group>"; };
 		568011A523032B2800BC26D9 /* UIChessboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIChessboardView.m; sourceTree = "<group>"; };
@@ -142,6 +151,8 @@
 				561820E42326F0A700D792E4 /* Models */,
 				5673F6FC232924FC00DD93C4 /* ViewControllers */,
 				5673F70023294A2000DD93C4 /* Views */,
+				560F48C6233B527600FBC283 /* AppConstants.h */,
+				564E7725233BBECA00F7FF23 /* AppConstants.m */,
 				56174C0722FB3336001C1152 /* AppDelegate.h */,
 				56174C0822FB3336001C1152 /* AppDelegate.m */,
 				56174C0D22FB3336001C1152 /* Main.storyboard */,
@@ -200,7 +211,7 @@
 			children = (
 				56B3E99E232EB6CE00482A7B /* Message.h */,
 				56B3E9A2232F9F6B00482A7B /* Message.m */,
-				5607AAD223338134009851EE /* Messages.pch */,
+				5607AAD223338134009851EE /* Messages.h */,
 				56B3E99F232EB71700482A7B /* RegisterDeviceRq.h */,
 				56B3E9A0232EB71700482A7B /* RegisterDeviceRq.m */,
 				56B3E9A6232FBD5F00482A7B /* RegisterDeviceRs.h */,
@@ -217,6 +228,10 @@
 				5607AAD52333B1F2009851EE /* GetGameStateRq.m */,
 				5607AAD72333B222009851EE /* GetGameStateRs.h */,
 				5607AAD82333B222009851EE /* GetGameStateRs.m */,
+				560F48C7233B788E00FBC283 /* SetGameStateRq.h */,
+				560F48C8233B788E00FBC283 /* SetGameStateRq.m */,
+				560F48CA233B78A800FBC283 /* SetGameStateRs.h */,
+				560F48CB233B78A800FBC283 /* SetGameStateRs.m */,
 				560F48BC233A5EB900FBC283 /* ExitGameRq.h */,
 				560F48BD233A5EB900FBC283 /* ExitGameRq.m */,
 				560F48BF233A5ECC00FBC283 /* ExitGameRs.h */,
@@ -307,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B3E9A1232EB71700482A7B /* RegisterDeviceRq.m in Sources */,
+				560F48C9233B788E00FBC283 /* SetGameStateRq.m in Sources */,
 				5607AAC823323D9A009851EE /* CurrentStateRq.m in Sources */,
 				5673F6FF23292F6E00DD93C4 /* ChessPiece.m in Sources */,
 				56233FA32301D5A000C9C6C4 /* UIChessPiece.m in Sources */,
@@ -320,6 +336,8 @@
 				5607AAD62333B1F2009851EE /* GetGameStateRq.m in Sources */,
 				560F48C1233A5ECC00FBC283 /* ExitGameRs.m in Sources */,
 				568011A623032B2800BC26D9 /* UIChessboardView.m in Sources */,
+				560F48CC233B78A800FBC283 /* SetGameStateRs.m in Sources */,
+				564E7726233BBECA00F7FF23 /* AppConstants.m in Sources */,
 				5607AADD2334A9E4009851EE /* GameService.m in Sources */,
 				5607AAD12333811F009851EE /* LookForGameRs.m in Sources */,
 				561047AB231455F60031EA83 /* ChessboardModel.m in Sources */,

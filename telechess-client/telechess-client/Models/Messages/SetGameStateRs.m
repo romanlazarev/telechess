@@ -1,16 +1,14 @@
 //
-//  GetGameStateRs.m
+//  SetGameStateRs.m
 //  telechess-client
 //
-//  Created by Roman Lazarev on 19/09/2019.
+//  Created by Roman Lazarev on 25/09/2019.
 //  Copyright © 2019 Roman Lazarev. All rights reserved.
 //
 
-#import "GetGameStateRs.h"
+#import "SetGameStateRs.h"
 
-@implementation GetGameStateRs {
-    NSDictionary * _dictionary;
-}
+@implementation SetGameStateRs
 @synthesize gameId;
 @synthesize state;
 @synthesize playerAName;
@@ -44,11 +42,6 @@
     pieces = [dictionary mutableArrayValueForKey:@"pieces"];
     side = [[dictionary valueForKey:@"side"] unsignedIntegerValue];
     
-    _dictionary = dictionary;
     return self;
-}
-
-- (NSDictionary *)dictionary {
-    return _dictionary;
 }
 @end

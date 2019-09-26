@@ -8,12 +8,15 @@
 
 #import "UIChessboardViewController.h"
 #import "UIChessPiece.h"
+#import "GameService.h"
 
 @interface UIChessboardViewController ()
 
 @end
 
-@implementation UIChessboardViewController
+@implementation UIChessboardViewController {
+    BOOL _updatingCycleIsActive;
+}
 
 @synthesize chessboardModel;
 
@@ -25,6 +28,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initInternals];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self startUpdateGame];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self stopUpdateGame];
+}
+
+- (void)startUpdateGame {
+    if(_updatingCycleIsActive)
+        return;
+    
+    _updatingCycleIsActive = NO;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger updates = 0;
+        GameService *gs = [GameService sharedInstance];
+        while (self->_updatingCycleIsActive || gs.isInGame) {
+            updates++;
+            NSLog(@"Update number: %ld", updates);
+            [gs getRemoteGameState];
+            [NSThread sleepForTimeInterval:2.f];
+        }
+        self->_updatingCycleIsActive = NO;
+    });
+}
+
+- (void)stopUpdateGame {
+    _updatingCycleIsActive = NO;
 }
 
 - (void)initInternals {
@@ -69,7 +105,7 @@
 }
 
 -(UIImage*)getImageByType:(CPType)type andSide:(CPSide)side {
-    if(side == kWhite) {
+    if(side == kWhiteSide) {
         switch (type) {
             case kPawn:
                 return self.whitePawnImage;
@@ -84,7 +120,7 @@
             case kQueen:
                 return self.whiteQueenImage;
         }
-    } else if(side == kBlack) {
+    } else if(side == kBlackSide) {
         switch (type) {
             case kPawn:
                 return self.blackPawnImage;

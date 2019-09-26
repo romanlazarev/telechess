@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "GameService.h"
 #import "NetworkService.h"
-#import "../Messages/Messages.pch"
+#import "../Messages/Messages.h"
 
 @implementation GameService {
     NSString *userToken;
@@ -59,14 +59,24 @@
     if([self userTokenProvided] == NO)
         return kUnknownToken;
     
-    CurrentStateRq *messageRq = [[CurrentStateRq alloc] initWithUserToken:userToken];
-    CurrentStateRs *response = (CurrentStateRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[CurrentStateRs class]];
-    victories = response.victories;
-    defeats = response.defeats;
-    
-    lastUserState = response.stateCode;
-    isInGame = lastUserState == kInGame; // TODO remove this
-    return response.stateCode;
+    @synchronized (self) {
+        CurrentStateRq *messageRq = [[CurrentStateRq alloc] initWithUserToken:userToken];
+        CurrentStateRs *response = (CurrentStateRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[CurrentStateRs class]];
+        victories = response.victories;
+        defeats = response.defeats;
+        activeGameId = response.gameId;
+
+        lastUserState = response.stateCode;
+        isInGame = lastUserState == kInGame; // TODO remove this
+        
+        Game *game = [self gameFromMessage:response];
+        if(game) {
+//            activeGameId = response.ga;
+            NSLog(@"%@", game);
+        }
+        
+        return response.stateCode;
+    }
 }
 
 - (void)lookForGame:(void (^)(NSString *gameId))complete {
@@ -79,11 +89,18 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSInteger try = 1;
+        LookForGameRs *lastResponse = nil;
         while (self.isLookingForGame) {
-            LookForGameRs *response = (LookForGameRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[LookForGameRs class]];
+            lastResponse = (LookForGameRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[LookForGameRs class]];
             NSLog(@"Try number: %ld", try);
-            if(response.state == kGameStarted) {
-                self->activeGameId = response.gameId;
+            if(lastResponse.state == kGameStarted) {
+                self->activeGameId = lastResponse.gameId;
+                self->isInGame = YES;
+                Game *game = [self gameFromMessage:lastResponse];
+                if(game) {
+                    self->activeGame = game;
+                }
+                
                 break;
             }
             
@@ -92,10 +109,10 @@
         }
 
         self->isLookingForGame = NO;
-        self->isInGame = YES;
         
         if(!complete || self->activeGameId == nil || self->activeGameId.length == 0)
             return;
+        
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             complete(self->activeGameId);
@@ -108,15 +125,63 @@
 }
 
 - (void)exitFromGame {
-    if([self userTokenProvided] == NO || isInGame == NO /*|| activeGameId || activeGameId.length == 0*/ )
+    if([self userTokenProvided] == NO || isInGame == NO || !activeGameId || activeGameId.length == 0 )
         return;
     
-    ExitGameRq *messageRq = [[ExitGameRq alloc] initWithUserToken:userToken andGameId:activeGameId];
-    ExitGameRs *response = (ExitGameRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[ExitGameRs class]];
+    isInGame = false;
+    activeGame = nil;
+    @synchronized (self) {
+        ExitGameRq *messageRq = [[ExitGameRq alloc] initWithUserToken:userToken andGameId:activeGameId];
+        ExitGameRs *response = (ExitGameRs*)[[NetworkService sharedInstance] request:messageRq withResponseClass:[ExitGameRs class]];
+        NSLog(@"Exit response: %@",response);
+    }
+}
+
+- (void)getRemoteGameState {
+    if([self userTokenProvided] == NO || isInGame == NO || !activeGameId || activeGameId.length == 0 )
+        return;
+    
+    @synchronized (self) {
+        GetGameStateRq *messageRq = [[GetGameStateRq alloc] initWithUserToken:userToken andGameId: activeGameId];
+        GetGameStateRs *response = (GetGameStateRs*)[[NetworkService sharedInstance] request:messageRq
+                                                     withResponseClass:[GetGameStateRs class]];
+        Game *game = [self gameFromMessage:response];
+        if(activeGame && game) {
+            [activeGame updateWithOtherGame:game];
+//            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:ActiveGameDidUpdatedNotification object:self->activeGame];
+//            });
+            
+            //
+        }
+    }
+}
+
+- (void)setRemoteGameState {
+ 
 }
 
 - (BOOL)userTokenProvided {
     return (userToken != NULL && userToken.length >= 0);
+}
+
+- (Game*)gameFromMessage:(Message*)message {
+    if(!message) {
+        return nil;
+    }
+    
+    Game *game = nil;
+
+    if([message isMemberOfClass:[GetGameStateRs class]] || [message isMemberOfClass:[LookForGameRs class]]) {
+        game = [[Game alloc] initWithDictionary:message.dictionary];
+    } else if([message isMemberOfClass:[CurrentStateRs class]]) {
+        NSDictionary *dict = [message.dictionary valueForKey:@"game"];
+        if(dict || dict.count > 0) {
+            game = [[Game alloc] initWithDictionary:dict];
+        }
+    }
+    
+    return game;
 }
 
 - (void)loadUserProfile {

@@ -1,8 +1,8 @@
 //
-//  GetGameStateRq.h
+//  SetGameStateRq.h
 //  telechess-client
 //
-//  Created by Roman Lazarev on 19/09/2019.
+//  Created by Roman Lazarev on 25/09/2019.
 //  Copyright © 2019 Roman Lazarev. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GetGameStateRq : Message
+@interface SetGameStateRq : Message
 @property (nonatomic, copy) NSString *userToken;
 @property (nonatomic, copy) NSString *gameId;
 

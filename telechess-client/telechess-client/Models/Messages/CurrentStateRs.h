@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSUInteger stateCode;
 @property (nonatomic, readonly) NSUInteger victories;
 @property (nonatomic, readonly) NSUInteger defeats;
+@property (nonatomic, readonly, copy) NSString* gameId;
 @end
 
 NS_ASSUME_NONNULL_END
